@@ -1,0 +1,272 @@
+[
+    {
+        "teamA": {
+            "playerA": {
+                "name": "Abreu"
+            },
+            "playerB": {
+                "name": "Barba"
+            }
+        },
+        "teamB": {
+            "playerA": {
+                "name": "Kennedy"
+            },
+            "playerB": {
+                "name": "Rafael"
+            }
+        }
+    },
+    {
+        "teamA": {
+            "playerA": {
+                "name": "Kennedy"
+            },
+            "playerB": {
+                "name": "Rafael"
+            }
+        },
+        "teamB": {
+            "playerA": {
+                "name": "Tripa"
+            },
+            "playerB": {
+                "name": "Kako"
+            }
+        }
+    },
+    {
+        "teamA": {
+            "playerA": {
+                "name": "Kennedy"
+            },
+            "playerB": {
+                "name": "Rafael"
+            }
+        },
+        "teamB": {
+            "playerA": {
+                "name": "Dotto"
+            },
+            "playerB": {
+                "name": "Murilo"
+            }
+        }
+    },
+    {
+        "teamA": {
+            "playerA": {
+                "name": "Abreu"
+            },
+            "playerB": {
+                "name": "Barba"
+            }
+        },
+        "teamB": {
+            "playerA": {
+                "name": "Dotto"
+            },
+            "playerB": {
+                "name": "Murilo"
+            }
+        }
+    },
+    {
+        "teamA": {
+            "playerA": {
+                "name": "Abreu"
+            },
+            "playerB": {
+                "name": "Barba"
+            }
+        },
+        "teamB": {
+            "playerA": {
+                "name": "Tripa"
+            },
+            "playerB": {
+                "name": "Kako"
+            }
+        }
+    },
+    {
+        "teamA": {
+            "playerA": {
+                "name": "Canatta"
+            },
+            "playerB": {
+                "name": "Mauricio"
+            }
+        },
+        "teamB": {
+            "playerA": {
+                "name": "Kleber"
+            },
+            "playerB": {
+                "name": "Juliano"
+            }
+        }
+    },
+    {
+        "teamA": {
+            "playerA": {
+                "name": "Tripa"
+            },
+            "playerB": {
+                "name": "Kako"
+            }
+        },
+        "teamB": {
+            "playerA": {
+                "name": "Canatta"
+            },
+            "playerB": {
+                "name": "Mauricio"
+            }
+        }
+    },
+    {
+        "teamA": {
+            "playerA": {
+                "name": "Abreu"
+            },
+            "playerB": {
+                "name": "Barba"
+            }
+        },
+        "teamB": {
+            "playerA": {
+                "name": "Canatta"
+            },
+            "playerB": {
+                "name": "Mauricio"
+            }
+        }
+    },
+    {
+        "teamA": {
+            "playerA": {
+                "name": "Abreu"
+            },
+            "playerB": {
+                "name": "Barba"
+            }
+        },
+        "teamB": {
+            "playerA": {
+                "name": "Kleber"
+            },
+            "playerB": {
+                "name": "Juliano"
+            }
+        }
+    },
+    {
+        "teamA": {
+            "playerA": {
+                "name": "Tripa"
+            },
+            "playerB": {
+                "name": "Kako"
+            }
+        },
+        "teamB": {
+            "playerA": {
+                "name": "Dotto"
+            },
+            "playerB": {
+                "name": "Murilo"
+            }
+        }
+    },
+    {
+        "teamA": {
+            "playerA": {
+                "name": "Dotto"
+            },
+            "playerB": {
+                "name": "Murilo"
+            }
+        },
+        "teamB": {
+            "playerA": {
+                "name": "Canatta"
+            },
+            "playerB": {
+                "name": "Mauricio"
+            }
+        }
+    },
+    {
+        "teamA": {
+            "playerA": {
+                "name": "Kennedy"
+            },
+            "playerB": {
+                "name": "Rafael"
+            }
+        },
+        "teamB": {
+            "playerA": {
+                "name": "Kleber"
+            },
+            "playerB": {
+                "name": "Juliano"
+            }
+        }
+    },
+    {
+        "teamA": {
+            "playerA": {
+                "name": "Tripa"
+            },
+            "playerB": {
+                "name": "Kako"
+            }
+        },
+        "teamB": {
+            "playerA": {
+                "name": "Kleber"
+            },
+            "playerB": {
+                "name": "Juliano"
+            }
+        }
+    },
+    {
+        "teamA": {
+            "playerA": {
+                "name": "Kennedy"
+            },
+            "playerB": {
+                "name": "Rafael"
+            }
+        },
+        "teamB": {
+            "playerA": {
+                "name": "Canatta"
+            },
+            "playerB": {
+                "name": "Mauricio"
+            }
+        }
+    },
+    {
+        "teamA": {
+            "playerA": {
+                "name": "Dotto"
+            },
+            "playerB": {
+                "name": "Murilo"
+            }
+        },
+        "teamB": {
+            "playerA": {
+                "name": "Kleber"
+            },
+            "playerB": {
+                "name": "Juliano"
+            }
+        }
+    }
+]
