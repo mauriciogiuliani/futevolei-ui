@@ -24,7 +24,7 @@ footer {
 .jogo1 {
     display: flex;
     justify-content: space-between;
-    padding: 5px 5px;
+    padding: 10px 5px;
     border: 1px solid #FFF;
     font-size: 12px;
 }
