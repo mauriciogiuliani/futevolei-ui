@@ -1,8 +1,7 @@
-
 <aside class="sidenav" *ngIf="sideNavOpened">
   <div class="sidenav-menu">
     <a (click)="toggleSideNav()" style="margin-bottom: 20px;">
-      <span class="material-icons-outlined" style="font-size: 32px" >
+      <span class="material-icons-outlined" style="font-size: 32px">
         close
       </span>
     </a>
@@ -25,9 +24,11 @@
 
 <header>
   <div class="header-logo">
-    Header
+    <span class="material-icons-outlined">
+      sports_soccer
+    </span>
   </div>
-  <div class="header-menu">
+  <!-- <div class="header-menu">
     <a (click)="toggleSideNav()">
 
 
@@ -35,14 +36,14 @@
         menu
       </span>
     </a>
-  </div>
+  </div> -->
 
 </header>
 
 
 
 <main>
-  <div class="main-menu">
+  <!-- <div class="main-menu">
 
     <a href="#" class="active">
 
@@ -51,51 +52,29 @@
     <a href="#">
       Classificação
     </a>
-  </div>
+  </div> -->
+
+
   <div style="margin: 15px 0px;">
 
     <!-- {{ matches[0].teamA?.playerA?.name }} -->
 
     <div *ngFor="let match of matches" class="jogo1">
 
-      <div>
+      <div style="flex-basis: 40%">
         {{match.teamA?.playerA?.name}} e {{match.teamA?.playerB?.name}}
       </div>
-      <div>
+      <div style="flex-basis: 10%">
         18 x 10
       </div>
-      <div>
-        {{match.teamA?.playerA?.name}} e {{match.teamA?.playerB?.name}}
+      <div style="flex-basis: 40%; display: flex;
+      flex-direction: row-reverse;">
+        {{match.teamB?.playerA?.name}} e {{match.teamB?.playerB?.name}}
 
       </div>
 
 
     </div>
-
-
-
-    <!-- <div class="jogo1">
-      <div> #1 </div>
-      <div>Mauricio e Rafael</div>
-      <div>18</div>
-      <div>x</div>
-      <div>10</div>
-      <div>Canatta e Kennedy
-      </div>
-    </div>
-
-    <div class="jogo2">
-      <div> #1 </div>
-      <div>Mauricio e Rafael</div>
-      <div>18</div>
-      <div>x</div>
-      <div>10</div>
-      <div>Canatta e Kennedy
-      </div>
-    </div> -->
-
-
-
 
   </div>
 
@@ -103,5 +82,37 @@
 </main>
 
 <footer>
+  <a href="#">
+    <div class="footer-menu">
+      <span class="material-icons-outlined">
+        sports_soccer
+      </span>
+      Jogos
+    </div>
+  </a>
+  <a href="#">
+    <div class="footer-menu">
+      <span class="material-icons-outlined">
+        toc
+      </span>
+      Tabela
+    </div>
+  </a>
+  <a href="#">
+    <div class="footer-menu">
+      <span class="material-icons-outlined">
+        emoji_events
+      </span>
+      Ranking
+    </div>
+  </a>
+  <a href="#">
 
+    <div class="footer-menu">
+      <span class="material-icons-outlined">
+        history
+      </span>
+      Histórico
+    </div>
+  </a>
 </footer>
