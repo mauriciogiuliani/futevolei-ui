@@ -4,7 +4,7 @@
 
 
 main {
-    margin: 15px 8px 0px 8px;
+    margin: 15px 8px 70px 8px;
 }
 
 
@@ -45,7 +45,10 @@ header {
     z-index: 998;
 
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: center;
+    
+    /* background-image: url("../assets/header_background.jpg"); */
 }
 
 .header-logo {
@@ -116,6 +119,7 @@ footer {
     bottom: 0;
     display: flex;
     justify-content: space-evenly;
+    gap: 15px;
     
 }
 
@@ -132,4 +136,68 @@ footer > a {
 
 .footer-menu > span {
     margin: 7px auto 2px auto;
+}
+
+
+/* MATCH DETAILS */
+.match-details-overlay {
+    background-color: rgba(0, 0, 0, 0.15);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+}
+
+.match-details {
+    background-color: #FFF;
+    border-radius: 5px;
+    z-index: 9999;
+    width: 85%;
+    height: 45%;
+    margin: 75px 30px 0px 30px;
+    position: fixed;
+    flex-direction: column;
+}
+
+.match-details-header {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    font-size: 18px;
+}
+
+.match-details-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 25px; */
+}
+
+.match-details-content > span {
+    padding: 10px;
+}
+
+.match-details-content > input {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 22px;
+    text-align: center;
+    border: 1px solid #5a5a5a;
+}
+
+.match-details-content > button {
+    margin-top: 25px;
+    width: 100px;
+    height: 35px;
+    background-color: #2196f3;
+    border: 0px solid #5a5a5a;
+    border-radius: 2px;
+    color: #e7e7e7;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
 }

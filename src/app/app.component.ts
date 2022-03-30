@@ -16,6 +16,8 @@ export class AppComponent implements OnInit {
 
   sideNavOpened : boolean = false;
 
+  isMatchDetailsOpened : boolean = false;
+
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
@@ -28,6 +30,11 @@ export class AppComponent implements OnInit {
 
   toggleSideNav() : void {
     this.sideNavOpened = !this.sideNavOpened;
+  }
+
+  toggleMatchDetails() : void {
+    console.log(this.isMatchDetailsOpened)
+    this.isMatchDetailsOpened = !this.isMatchDetailsOpened;
   }
 
 }

@@ -21,12 +21,40 @@
   </div>
 </aside>
 
+<div class="match-details-overlay" *ngIf="isMatchDetailsOpened">
+  <div class="match-details">
+    
+    <div class="match-details-header">
+        Detalhes da Partida
+    </div>
+
+    <div class="match-details-content">
+      <span>
+        Mauricio e Rafael
+      </span>
+      <input type="number" maxlength="2" />
+      <span>
+        X
+      </span>
+      <input type="number" maxlength="2" />
+      <span>
+        Mauricio e Rafael
+      </span>
+      <button (click)="toggleMatchDetails()"> Salvar </button>
+    </div>
+
+
+  </div>
+</div>
 
 <header>
+  
   <div class="header-logo">
-    <span class="material-icons-outlined">
+    <img src="../assets/logo1.svg" style="height: 50px;"/>
+    <!-- PANELA DA CATEQUESE -->
+    <!-- <span class="material-icons-outlined">
       sports_soccer
-    </span>
+    </span> -->
   </div>
   <!-- <div class="header-menu">
     <a (click)="toggleSideNav()">
@@ -42,7 +70,11 @@
 
 
 
+
 <main>
+  
+
+
   <!-- <div class="main-menu">
 
     <a href="#" class="active">
@@ -59,6 +91,20 @@
 
     <!-- {{ matches[0].teamA?.playerA?.name }} -->
 
+    <div *ngFor="let match of matches" class="jogo1" (click)="toggleMatchDetails()">
+
+      <div style="flex-basis: 40%">
+        {{match.teamA?.playerA?.name}} e {{match.teamA?.playerB?.name}}
+      </div>
+      <div style="margin: auto">
+        18 x 10
+      </div>
+      <div style="flex-basis: 40%; display: flex;
+      flex-direction: row-reverse;">
+        {{match.teamB?.playerA?.name}} e {{match.teamB?.playerB?.name}}
+      </div>
+    </div>
+
     <div *ngFor="let match of matches" class="jogo1">
 
       <div style="flex-basis: 40%">
@@ -70,10 +116,7 @@
       <div style="flex-basis: 40%; display: flex;
       flex-direction: row-reverse;">
         {{match.teamB?.playerA?.name}} e {{match.teamB?.playerB?.name}}
-
       </div>
-
-
     </div>
 
   </div>
@@ -81,10 +124,10 @@
 
 </main>
 
-<footer>
+<footer style="">
   <a href="#">
     <div class="footer-menu">
-      <span class="material-icons-outlined">
+      <span class="material-icons-outlined" style="color: #000;">
         sports_soccer
       </span>
       Jogos
