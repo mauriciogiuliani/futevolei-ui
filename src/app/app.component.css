@@ -4,7 +4,7 @@
 
 
 main {
-    margin: 85px 8px 0px 8px;
+    margin: 15px 8px 0px 8px;
 }
 
 
@@ -35,7 +35,7 @@ main {
 
 /* HEADER */
 header {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     width: 100%;
