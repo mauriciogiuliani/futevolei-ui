@@ -3,5 +3,6 @@
     "short_name": "CatequeseFTV",
     "start_url": ".",
     "display": "fullscreen",
-    "background_color": "#CCC"
+    "background_color": "#FFF",
+    "theme_color": "#FFF"
 }
