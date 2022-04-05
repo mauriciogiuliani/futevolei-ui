@@ -21,11 +21,11 @@ export class AppComponent implements OnInit {
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
-    this.httpClient.get<Match[]>("../assets/tabela.json").subscribe(
-      data => {
-        console.log(data);
-        this.matches = data;
-      });
+    // this.httpClient.get<Match[]>("../assets/tabela.json").subscribe(
+    //   data => {
+    //     console.log(data);
+    //     this.matches = data;
+    //   });
   }
 
   toggleSideNav() : void {

@@ -201,3 +201,34 @@ footer > a {
     font-family: "Poppins", sans-serif;
     font-size: 14px;
 }
+
+
+/* TABLE */
+.table-header {
+    background-color: #b3e5fc;
+    color: #424242;
+    display: grid;
+    column-gap: 2px;
+    grid-template-columns: 200px 25px 25px 25px 25px 25px 25px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "dupla J V D PP PC S"
+        "dupla1"
+}
+
+.table:nth-child(even) {
+    background-color: #e7e7e7;
+}
+
+.table:nth-child(odd) {
+    
+    background-color: #f9f9f9
+}
+
+.jogo1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    border: 1px solid #FFF;
+    font-size: 12px;
+}
