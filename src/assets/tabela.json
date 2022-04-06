@@ -15,7 +15,9 @@
             "playerB": {
                 "name": "Rafael"
             }
-        }
+        },
+        "pointsTeamA" : 18,
+        "pointsTeamB" : 15
     },
     {
         "teamA": {
@@ -33,7 +35,9 @@
             "playerB": {
                 "name": "Kako"
             }
-        }
+        },
+        "pointsTeamA" : 10,
+        "pointsTeamB" : 18
     },
     {
         "teamA": {
@@ -51,7 +55,9 @@
             "playerB": {
                 "name": "Murilo"
             }
-        }
+        },
+        "pointsTeamA" : 18,
+        "pointsTeamB" : 8
     },
     {
         "teamA": {
@@ -69,7 +75,9 @@
             "playerB": {
                 "name": "Murilo"
             }
-        }
+        },
+        "pointsTeamA" : 20,
+        "pointsTeamB" : 18
     },
     {
         "teamA": {

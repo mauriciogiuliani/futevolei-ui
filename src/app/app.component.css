@@ -194,7 +194,7 @@ footer > a {
     margin-top: 25px;
     width: 100px;
     height: 35px;
-    background-color: #2196f3;
+    background-color: #03a9f4;
     border: 0px solid #5a5a5a;
     border-radius: 2px;
     color: #e7e7e7;
@@ -232,3 +232,11 @@ footer > a {
     border: 1px solid #FFF;
     font-size: 12px;
 }
+
+/* MATCHES */
+.matches-result {
+    display: flex;
+    gap: 5px;
+    margin: auto;
+}
+

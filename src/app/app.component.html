@@ -88,7 +88,9 @@
 
 
   <div style="margin: 15px 0px;">
-    <table>
+
+
+    <!-- <table>
       <thead>
         <tr>
           <th style="font-size: 14px; width: 200px;">
@@ -128,45 +130,23 @@
         </tr>
         
       </tbody>
-    </table>
-
-    <!-- <div class="table-header">
-      <div style="grid-area: dupla">
-        Dupla
-      </div>
-      <div style="grid-area: J">
-        J
-      </div>
-      <div style="grid-area: V">
-        V
-      </div>
-      <div style="grid-area: D">
-        D
-      </div>
-      <div style="grid-area: PP">
-        PP
-      </div>
-      <div style="grid-area: PC">
-        PC
-      </div>
-      <div style="grid-area: S">
-        S
-      </div>
-
-      <div style="grid-area: dupla1">
-        Mauricio e Rafael
-      </div>
-    </div> -->
-
-    <!-- {{ matches[0].teamA?.playerA?.name }} -->
+    </table> -->
 
     <div *ngFor="let match of matches" class="jogo1" (click)="toggleMatchDetails()">
 
       <div style="flex-basis: 40%">
         {{match.teamA?.playerA?.name}} e {{match.teamA?.playerB?.name}}
       </div>
-      <div style="margin: auto">
-        18 x 10
+      <div class="matches-result">
+        <span>
+          {{ match.pointsTeamA }}
+        </span>
+        <span>
+          x
+        </span>
+        <span>
+          {{ match.pointsTeamB }}
+        </span>
       </div>
       <div style="flex-basis: 40%; display: flex;
       flex-direction: row-reverse;">
@@ -174,7 +154,7 @@
       </div>
     </div>
 
-    <div *ngFor="let match of matches" class="jogo1">
+    <!-- <div *ngFor="let match of matches" class="jogo1">
 
       <div style="flex-basis: 40%">
         {{match.teamA?.playerA?.name}} e {{match.teamA?.playerB?.name}}
@@ -186,7 +166,7 @@
       flex-direction: row-reverse;">
         {{match.teamB?.playerA?.name}} e {{match.teamB?.playerB?.name}}
       </div>
-    </div>
+    </div> -->
 
   </div>
 
