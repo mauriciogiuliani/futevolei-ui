@@ -26,11 +26,6 @@ main {
     font-size: 12px;
 }
 
-.jogo1 > div {
-    /* flex: 0 1 1; */
-  /* width: 0; */
-}
-
 
 
 /* HEADER */
@@ -123,20 +118,28 @@ footer {
     
 }
 
-footer > a {
+.footer-menu > a {
     text-decoration: none;
     color: #5a5a5a;
 }
 
-.footer-menu {
+
+
+.footer-menu-item {
     display: flex;
     flex-direction: column;
     font-size: 12px;
 }
 
-.footer-menu > span {
+.footer-menu-item-active {
+    color: #03a9f4
+}
+
+.footer-menu-item > span {
     margin: 7px auto 2px auto;
 }
+
+
 
 
 /* MATCH DETAILS */
@@ -204,30 +207,19 @@ footer > a {
 
 
 /* TABLE */
-.table-header {
-    background-color: #b3e5fc;
-    color: #424242;
-    display: grid;
-    column-gap: 2px;
-    grid-template-columns: 200px 25px 25px 25px 25px 25px 25px;
-    grid-template-rows: auto;
-    grid-template-areas: 
-        "dupla J V D PP PC S"
-        "dupla1"
+.table-tournament {
+    width: 100%;
 }
 
-.table:nth-child(even) {
+.table-tournament-body:nth-child(even) {
     background-color: #e7e7e7;
 }
 
-.table:nth-child(odd) {
-    
-    background-color: #f9f9f9
+.table-tournament-body:nth-child(odd) {
+    background-color: #f9f9f9;
 }
 
-.jogo1 {
-    display: flex;
-    justify-content: space-between;
+.table-tournament-info {
     padding: 10px 5px;
     border: 1px solid #FFF;
     font-size: 12px;
@@ -240,3 +232,13 @@ footer > a {
     margin: auto;
 }
 
+
+
+/* EXTRA */
+.align-center {
+    text-align: center;
+}
+
+table, tr, td {
+    border: none;
+}

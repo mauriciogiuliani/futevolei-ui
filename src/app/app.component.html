@@ -72,139 +72,89 @@
 
 
 <main>
+  <div style="margin: 15px 0px;" *ngFor="let menu of menus">
 
+    <div id="tournament-table" *ngIf="menu.label === 'Tabela' && menu.active">
+      <table class="table-tournament" cellspacing="0" cellpadding="0">
+        <thead>
+          <tr>
+            <th style="font-size: 14px; width: 200px;">
+              Dupla
+            </th>
+            <th style="font-size: 14px;">
+              J
+            </th>
+            <th style="font-size: 14px;">
+              V
+            </th>
+            <th style="font-size: 14px;">
+              D
+            </th>
+            <th style="font-size: 14px;">
+              S
+            </th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let double of doubles" class="table-tournament-body">
+          <tr>
+            <td class="table-tournament-info">
+              {{double.playerA?.name }} e {{double.playerB?.name }}
+            </td>
+            <td class="table-tournament-info align-center">
+              {{ double.matches }}
+            </td>
+            <td class="table-tournament-info align-center">
+              {{ double.wins }}
+            </td>
+            <td class="table-tournament-info align-center">
+              {{ double.loss }}
+            </td>
+            <td class="table-tournament-info align-center">
+              {{ double.balance }}
+            </td>
+          </tr>
 
-
-  <!-- <div class="main-menu">
-
-    <a href="#" class="active">
-
-      Tabela de Jogos
-    </a>
-    <a href="#">
-      Classificação
-    </a>
-  </div> -->
-
-
-  <div style="margin: 15px 0px;">
-
-
-    <!-- <table>
-      <thead>
-        <tr>
-          <th style="font-size: 14px; width: 200px;">
-            Dupla
-          </th>
-           <th style="font-size: 14px;">
-            J
-          </th>
-           <th style="font-size: 14px;">
-            V
-          </th>
-           <th style="font-size: 14px;">
-            D
-          </th>
-           <th style="font-size: 14px;">
-            S
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="font-size: 12px;">
-            Mauricio e Rafael
-          </td>
-         <td style="font-size: 12px;">
-            3
-          </td>
-         <td style="font-size: 12px;">
-            3
-          </td>
-         <td style="font-size: 12px;">
-            0
-          </td>
-         <td style="font-size: 12px;">
-            18
-          </td>
-        </tr>
-        
-      </tbody>
-    </table> -->
-
-    <div *ngFor="let match of matches" class="jogo1" (click)="toggleMatchDetails()">
-
-      <div style="flex-basis: 40%">
-        {{match.teamA?.playerA?.name}} e {{match.teamA?.playerB?.name}}
-      </div>
-      <div class="matches-result">
-        <span>
-          {{ match.pointsTeamA }}
-        </span>
-        <span>
-          x
-        </span>
-        <span>
-          {{ match.pointsTeamB }}
-        </span>
-      </div>
-      <div style="flex-basis: 40%; display: flex;
-      flex-direction: row-reverse;">
-        {{match.teamB?.playerA?.name}} e {{match.teamB?.playerB?.name}}
-      </div>
+        </tbody>
+      </table>
     </div>
 
-    <!-- <div *ngFor="let match of matches" class="jogo1">
 
-      <div style="flex-basis: 40%">
-        {{match.teamA?.playerA?.name}} e {{match.teamA?.playerB?.name}}
-      </div>
-      <div style="margin: auto">
-        18 x 10
-      </div>
-      <div style="flex-basis: 40%; display: flex;
+    <div *ngIf="menu.label === 'Jogos' && menu.active">
+      <div *ngFor="let match of matches" class="jogo1" (click)="toggleMatchDetails()">
+
+        <div style="flex-basis: 40%">
+          {{match.teamA?.playerA?.name}} e {{match.teamA?.playerB?.name}}
+        </div>
+        <div class="matches-result">
+          <span>
+            {{ match.pointsTeamA }}
+          </span>
+          <span>
+            x
+          </span>
+          <span>
+            {{ match.pointsTeamB }}
+          </span>
+        </div>
+        <div style="flex-basis: 40%; display: flex;
       flex-direction: row-reverse;">
-        {{match.teamB?.playerA?.name}} e {{match.teamB?.playerB?.name}}
+          {{match.teamB?.playerA?.name}} e {{match.teamB?.playerB?.name}}
+        </div>
       </div>
-    </div> -->
-
+    </div>
   </div>
-
 
 </main>
 
-<footer style="">
-  <a href="#">
-    <div class="footer-menu" style="color: #03a9f4;">
-      <span class="material-icons-outlined" style="color: #03a9f4">
-        sports_soccer
-      </span>
-      Jogos
-    </div>
-  </a>
-  <a href="#">
-    <div class="footer-menu">
-      <span class="material-icons-outlined">
-        toc
-      </span>
-      Tabela
-    </div>
-  </a>
-  <a href="#">
-    <div class="footer-menu">
-      <span class="material-icons-outlined">
-        emoji_events
-      </span>
-      Ranking
-    </div>
-  </a>
-  <a href="#">
-
-    <div class="footer-menu">
-      <span class="material-icons-outlined">
-        history
-      </span>
-      Histórico
-    </div>
-  </a>
+<footer>
+  <div class="footer-menu" *ngFor="let menu of menus">
+    <a (click)="changePage(menu.label)">
+      <div [ngClass]="{'footer-menu-item': true, 'footer-menu-item-active' : menu.active}">
+        <span class="material-icons-outlined">
+          sports_soccer
+        </span>
+        {{ menu.label }}
+      </div>
+    </a>
+  </div>
 </footer>

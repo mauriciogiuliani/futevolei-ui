@@ -131,7 +131,9 @@
             "playerB": {
                 "name": "Mauricio"
             }
-        }
+        },
+        "pointsTeamA" : 21,
+        "pointsTeamB" : 19
     },
     {
         "teamA": {
