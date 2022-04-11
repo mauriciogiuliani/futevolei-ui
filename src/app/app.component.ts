@@ -5,6 +5,8 @@ import { Menu } from 'src/model/menu';
 import { Team } from 'src/model/team';
 // import  * as matchesJson from './tabela.json'
 
+import { firstValueFrom } from "rxjs";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -109,23 +111,24 @@ export class AppComponent implements OnInit {
       icon: "toc",
       // function: this.showTournamentTable
     },
-    {
-      label: "Ranking",
-      active: false,
-      icon: "emoji_events",
-      // function: this.showTournamentTable
-    },
-    {
-      label: "Histórico",
-      active: false,
-      icon: "history",
-      // function: this.showTournamentTable
-    }
+    // {
+    //   label: "Ranking",
+    //   active: false,
+    //   icon: "emoji_events",
+    //   // function: this.showTournamentTable
+    // },
+    // {
+    //   label: "Histórico",
+    //   active: false,
+    //   icon: "history",
+    //   // function: this.showTournamentTable
+    // }
   ]
 
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
+
     this.httpClient.get<Match[]>("../assets/tabela.json").subscribe(
       data => {
         console.log(data);

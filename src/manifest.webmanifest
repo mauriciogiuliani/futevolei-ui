@@ -2,7 +2,13 @@
     "name": "CatequeseFTV",
     "short_name": "CatequeseFTV",
     "start_url": ".",
-    "display": "fullscreen",
+    "display": "standalone",
     "background_color": "#FFF",
-    "theme_color": "#FFF"
+    "theme_color": "#FFF",
+    "icons": [{
+        "src": "assets/logo1.svg",
+        "sizes": "48x48",
+        "type": "image/svg+xml"
+      }
+    ]
 }

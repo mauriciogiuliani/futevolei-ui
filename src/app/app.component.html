@@ -1,3 +1,11 @@
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v13.0&appId=1123466031780514&autoLogAppEvents=1"
+  nonce="KX6iBSFt"></script>
+
+
+
+
 <aside class="sidenav" *ngIf="sideNavOpened">
   <div class="sidenav-menu">
     <a (click)="toggleSideNav()" style="margin-bottom: 20px;">
@@ -120,6 +128,9 @@
 
 
     <div *ngIf="menu.label === 'Jogos' && menu.active">
+      <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default"
+  data-auto-logout-link="false" data-use-continue-as="false"></div>
+  
       <div *ngFor="let match of matches" class="jogo1" (click)="toggleMatchDetails()">
 
         <div style="flex-basis: 40%">
@@ -151,7 +162,7 @@
     <a (click)="changePage(menu.label)">
       <div [ngClass]="{'footer-menu-item': true, 'footer-menu-item-active' : menu.active}">
         <span class="material-icons-outlined">
-          sports_soccer
+          {{ menu.icon }}
         </span>
         {{ menu.label }}
       </div>
