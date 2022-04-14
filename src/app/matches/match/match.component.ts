@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { LoadingService } from 'src/app/loading/loading.service';
 import { Match } from 'src/model/match';
 import { MatchService } from './match.service';
 
@@ -18,7 +19,7 @@ export class MatchComponent implements OnInit {
 
   isMatchDetailsOpened: boolean = false;
 
-  constructor(private httpClient: HttpClient, private matchService: MatchService) { }
+  constructor(private httpClient: HttpClient, private matchService: MatchService, private loadingService: LoadingService) { }
 
   ngOnInit(): void {
     console.log("AA")
@@ -30,10 +31,12 @@ export class MatchComponent implements OnInit {
   }
 
   saveMatchResult() {
+    this.loadingService.open();
     this.httpClient.post<any>("https://7hip2znooquhilsdo7mbn2ymui0yrxsl.lambda-url.us-east-1.on.aws", this.match).subscribe(
       data => {
         console.log(data);
-        this.toggleMatchDetails();
+        this.toggleMatchDetails();  
+        this.loadingService.close();
       }
     );
   }

@@ -10,6 +10,7 @@ import { NavigationBottomComponent } from './navigation-bottom/navigation-bottom
 import { ClassificationComponent } from './classification/classification.component';
 import { MatchComponent } from './matches/match/match.component'
 import { FormsModule } from '@angular/forms';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     MatchesComponent,
     NavigationBottomComponent,
     ClassificationComponent,
-    MatchComponent
+    MatchComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
