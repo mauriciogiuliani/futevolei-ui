@@ -129,12 +129,19 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.httpClient.get<Match[]>("../assets/tabela.json").subscribe(
+    // this.httpClient.get<Match[]>("../assets/tabela.json").subscribe(
+    //   data => {
+    //     console.log(data);
+    //     this.matches = data;
+    //     this.refreshTournamentTable();
+    //   });
+
+    this.httpClient.get<any>("https://7hip2znooquhilsdo7mbn2ymui0yrxsl.lambda-url.us-east-1.on.aws").subscribe(
       data => {
-        console.log(data);
-        this.matches = data;
-        this.refreshTournamentTable();
-      });
+        console.log(data.Items);
+        this.matches = data.Items;
+      }
+    );
 
 
   }
@@ -143,7 +150,7 @@ export class AppComponent implements OnInit {
     this.sideNavOpened = !this.sideNavOpened;
   }
 
-  toggleMatchDetails(): void {
+  toggleMatchDetails(matchId: string): void {
     console.log(this.isMatchDetailsOpened)
     this.isMatchDetailsOpened = !this.isMatchDetailsOpened;
   }
@@ -160,58 +167,61 @@ export class AppComponent implements OnInit {
   }
 
   refreshTournamentTable() {
-    this.matches.filter(match =>
-      match.pointsTeamA > 0 && match.pointsTeamB > 0
-    ).forEach(match => {
-      if (match.pointsTeamA > 0 && match.pointsTeamB > 0) {
-
-        let teamAIndex = this.doubles.findIndex(double =>
-          double.playerA.name === match.teamA.playerA.name && double.playerB.name == match.teamA.playerB.name
-        );
-        let teamBIndex = this.doubles.findIndex(double =>
-          double.playerA.name == match.teamB.playerA.name && double.playerB.name == match.teamB.playerB.name
-        );
-
-        if (teamAIndex >= 0 && teamBIndex >= 0) {
-          if (match.pointsTeamA > match.pointsTeamB) {
-            this.doubles[teamAIndex].matches++
-            this.doubles[teamAIndex].wins++
-            this.doubles[teamAIndex].balance += (match.pointsTeamA - match.pointsTeamB)
-
-            this.doubles[teamBIndex].matches++
-            this.doubles[teamBIndex].loss++
-            this.doubles[teamBIndex].balance += (match.pointsTeamB - match.pointsTeamA)
-          } else {
-            this.doubles[teamAIndex].matches++
-            this.doubles[teamAIndex].loss++
-            this.doubles[teamAIndex].balance += (match.pointsTeamA - match.pointsTeamB)
-
-            this.doubles[teamBIndex].matches++
-            this.doubles[teamBIndex].wins++
-            this.doubles[teamBIndex].balance += (match.pointsTeamB - match.pointsTeamA)
-          }
-        }
-      }
-    });
-
-    this.doubles.sort((a, b) => {
-      if (a.wins > b.wins) {
-        return -1;
-      }
-      if (a.wins < b.wins) {
-        return 1;
-      } else {
-        console.log("AAA")
-        if (a.balance > b.balance) {
-          return -1
-        } if (a.balance < b.balance) {
-          return 1;
-        } else {
-          return 0;
-        }
-      }
-    });
 
   }
+  // refreshTournamentTable() {
+  //   this.matches.filter(match =>
+  //     match.pointsTeamA > 0 && match.pointsTeamB > 0
+  //   ).forEach(match => {
+  //     if (match.pointsTeamA > 0 && match.pointsTeamB > 0) {
+
+  //       let teamAIndex = this.doubles.findIndex(double =>
+  //         double.playerA.name === match.teamA.playerA.name && double.playerB.name == match.teamA.playerB.name
+  //       );
+  //       let teamBIndex = this.doubles.findIndex(double =>
+  //         double.playerA.name == match.teamB.playerA.name && double.playerB.name == match.teamB.playerB.name
+  //       );
+
+  //       if (teamAIndex >= 0 && teamBIndex >= 0) {
+  //         if (match.pointsTeamA > match.pointsTeamB) {
+  //           this.doubles[teamAIndex].matches++
+  //           this.doubles[teamAIndex].wins++
+  //           this.doubles[teamAIndex].balance += (match.pointsTeamA - match.pointsTeamB)
+
+  //           this.doubles[teamBIndex].matches++
+  //           this.doubles[teamBIndex].loss++
+  //           this.doubles[teamBIndex].balance += (match.pointsTeamB - match.pointsTeamA)
+  //         } else {
+  //           this.doubles[teamAIndex].matches++
+  //           this.doubles[teamAIndex].loss++
+  //           this.doubles[teamAIndex].balance += (match.pointsTeamA - match.pointsTeamB)
+
+  //           this.doubles[teamBIndex].matches++
+  //           this.doubles[teamBIndex].wins++
+  //           this.doubles[teamBIndex].balance += (match.pointsTeamB - match.pointsTeamA)
+  //         }
+  //       }
+  //     }
+  //   });
+
+  //   this.doubles.sort((a, b) => {
+  //     if (a.wins > b.wins) {
+  //       return -1;
+  //     }
+  //     if (a.wins < b.wins) {
+  //       return 1;
+  //     } else {
+  //       console.log("AAA")
+  //       if (a.balance > b.balance) {
+  //         return -1
+  //       } if (a.balance < b.balance) {
+  //         return 1;
+  //       } else {
+  //         return 0;
+  //       }
+  //     }
+  //   });
+
+  // }
 
 }

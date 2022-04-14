@@ -1,11 +1,11 @@
-<div id="fb-root"></div>
+<!-- <div id="fb-root"></div>
 <script async defer crossorigin="anonymous"
   src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v13.0&appId=1123466031780514&autoLogAppEvents=1"
-  nonce="KX6iBSFt"></script>
+  nonce="KX6iBSFt"></script> -->
 
 
 
-
+<!-- 
 <aside class="sidenav" *ngIf="sideNavOpened">
   <div class="sidenav-menu">
     <a (click)="toggleSideNav()" style="margin-bottom: 20px;">
@@ -27,33 +27,9 @@
     </a>
 
   </div>
-</aside>
-
-<div class="match-details-overlay" *ngIf="isMatchDetailsOpened">
-  <div class="match-details">
-
-    <div class="match-details-header">
-      Detalhes da Partida
-    </div>
-
-    <div class="match-details-content">
-      <span>
-        Mauricio e Rafael
-      </span>
-      <input type="number" maxlength="2" />
-      <span>
-        X
-      </span>
-      <input type="number" maxlength="2" />
-      <span>
-        Mauricio e Rafael
-      </span>
-      <button (click)="toggleMatchDetails()"> Salvar </button>
-    </div>
+</aside> -->
 
 
-  </div>
-</div>
 
 <header>
 
@@ -80,80 +56,9 @@
 
 
 <main>
-  <div style="margin: 15px 0px;" *ngFor="let menu of menus">
-
-    <div id="tournament-table" *ngIf="menu.label === 'Tabela' && menu.active">
-      <table class="table-tournament" cellspacing="0" cellpadding="0">
-        <thead>
-          <tr>
-            <th style="font-size: 14px; width: 200px;">
-              Dupla
-            </th>
-            <th style="font-size: 14px;">
-              J
-            </th>
-            <th style="font-size: 14px;">
-              V
-            </th>
-            <th style="font-size: 14px;">
-              D
-            </th>
-            <th style="font-size: 14px;">
-              S
-            </th>
-          </tr>
-        </thead>
-        <tbody *ngFor="let double of doubles" class="table-tournament-body">
-          <tr>
-            <td class="table-tournament-info">
-              {{double.playerA?.name }} e {{double.playerB?.name }}
-            </td>
-            <td class="table-tournament-info align-center">
-              {{ double.matches }}
-            </td>
-            <td class="table-tournament-info align-center">
-              {{ double.wins }}
-            </td>
-            <td class="table-tournament-info align-center">
-              {{ double.loss }}
-            </td>
-            <td class="table-tournament-info align-center">
-              {{ double.balance }}
-            </td>
-          </tr>
-
-        </tbody>
-      </table>
-    </div>
-
-
-    <div *ngIf="menu.label === 'Jogos' && menu.active">
-      <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default"
-  data-auto-logout-link="false" data-use-continue-as="false"></div>
   
-      <div *ngFor="let match of matches" class="jogo1" (click)="toggleMatchDetails()">
-
-        <div style="flex-basis: 40%">
-          {{match.teamA?.playerA?.name}} e {{match.teamA?.playerB?.name}}
-        </div>
-        <div class="matches-result">
-          <span>
-            {{ match.pointsTeamA }}
-          </span>
-          <span>
-            x
-          </span>
-          <span>
-            {{ match.pointsTeamB }}
-          </span>
-        </div>
-        <div style="flex-basis: 40%; display: flex;
-      flex-direction: row-reverse;">
-          {{match.teamB?.playerA?.name}} e {{match.teamB?.playerB?.name}}
-        </div>
-      </div>
-    </div>
-  </div>
+<router-outlet></router-outlet>
+  
 
 </main>
 

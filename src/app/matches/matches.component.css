@@ -1,0 +1,11 @@
+.matches {
+   width: 100%;
+}
+.matches:nth-child(even) {
+    background-color: #e7e7e7;
+}
+
+.matches:nth-child(odd) {
+    
+    background-color: #f9f9f9
+}

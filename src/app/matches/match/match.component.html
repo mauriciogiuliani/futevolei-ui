@@ -1,0 +1,46 @@
+<div class="match" (click)="toggleMatchDetails()" >
+    <div style="flex-basis: 40%">
+        {{ match?.doubleA }}
+    </div>
+    <div class="matches-result">
+        <span>
+            {{ match?.pointsDoubleA }}
+        </span>
+        <span>
+            x
+        </span>
+        <span>
+            {{ match?.pointsDoubleB }}
+        </span>
+    </div>
+    <div style="flex-basis: 40%; display: flex;
+flex-direction: row-reverse;">
+        {{ match?.doubleB }}
+    </div>
+</div>
+
+<div class="match-details-overlay" *ngIf="isMatchDetailsOpened">
+    <div class="match-details">
+
+        <div class="match-details-header">
+            Detalhes da Partida
+        </div>
+
+        <div class="match-details-content">
+            <span>
+                Mauricio e Rafael
+            </span>
+            <input type="number" maxlength="2" [(ngModel)]="match.pointsDoubleA"/>
+            <span>
+                X
+            </span>
+            <input type="number" maxlength="2" [(ngModel)]="match.pointsDoubleB"/>
+            <span>
+                Mauricio e Rafael
+            </span>
+            <button (click)="saveMatchResult()"> Salvar </button>
+        </div>
+
+
+    </div>
+</div>
