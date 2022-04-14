@@ -1,6 +1,7 @@
 .matches {
    width: 100%;
 }
+
 .matches:nth-child(even) {
     background-color: #e7e7e7;
 }

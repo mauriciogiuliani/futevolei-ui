@@ -1,11 +1,28 @@
-<!-- <div style="margin: 15px 2px;">
-    Copa Catequese
-</div> -->
+<div style="margin: 15px 2px;">
+    <div style="display: flex;
+    align-items: center;
+    justify-content: space-between;">
+        Tabela de Jogos
+
+        <select disabled>
+            <option>Copa Catequese</option>
+            <!-- <option>Iniciante</option> -->
+        </select>
+    </div>
+</div>
 
 <div style="    background-color: #03a9f440;
-padding: 10px 0px;
-text-align: center;">
-    Tabela de Jogos
+padding: 5px 5px; font-size: 14px;">
+    Grupo A
+</div>
+
+<div *ngFor="let match of matches" class="matches">
+    <ftv-match  [match]="match"></ftv-match>
+</div>
+
+<div style="    background-color: #03a9f440;
+padding: 5px 5px; font-size: 14px; margin-top: 20px;">
+    Grupo B
 </div>
 
 <div *ngFor="let match of matches" class="matches">

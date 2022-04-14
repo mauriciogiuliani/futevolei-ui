@@ -23,12 +23,12 @@ flex-direction: row-reverse;">
     <div class="match-details">
 
         <div class="match-details-header">
-            Detalhes da Partida
+            
         </div>
 
         <div class="match-details-content">
             <span>
-                Mauricio e Rafael
+               {{ match.doubleA }}
             </span>
             <input type="number" maxlength="2" [(ngModel)]="match.pointsDoubleA"/>
             <span>
@@ -36,7 +36,7 @@ flex-direction: row-reverse;">
             </span>
             <input type="number" maxlength="2" [(ngModel)]="match.pointsDoubleB"/>
             <span>
-                Mauricio e Rafael
+                {{ match.doubleB }}
             </span>
             <button (click)="saveMatchResult()"> Salvar </button>
         </div>
