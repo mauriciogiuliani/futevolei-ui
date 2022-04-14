@@ -30,7 +30,7 @@ export class MatchComponent implements OnInit {
   }
 
   saveMatchResult() {
-    this.httpClient.post<any>("https://uxwi0dsjle.execute-api.us-east-1.amazonaws.com/ftv-matches", this.match).subscribe(
+    this.httpClient.post<any>("https://7hip2znooquhilsdo7mbn2ymui0yrxsl.lambda-url.us-east-1.on.aws", this.match).subscribe(
       data => {
         console.log(data);
         this.toggleMatchDetails();
