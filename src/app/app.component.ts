@@ -136,12 +136,12 @@ export class AppComponent implements OnInit {
     //     this.refreshTournamentTable();
     //   });
 
-    this.httpClient.get<any>("https://7hip2znooquhilsdo7mbn2ymui0yrxsl.lambda-url.us-east-1.on.aws").subscribe(
-      data => {
-        console.log(data.Items);
-        this.matches = data.Items;
-      }
-    );
+    // this.httpClient.get<any>("https://7hip2znooquhilsdo7mbn2ymui0yrxsl.lambda-url.us-east-1.on.aws").subscribe(
+    //   data => {
+    //     console.log(data.Items);
+    //     this.matches = data.Items;
+    //   }
+    // );
 
 
   }

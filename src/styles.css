@@ -1,12 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-html {
-    height: 100%;
-}
 body {
-    display: flex;
-    align-content: space-between;
+    background-color: var(--color-white);
     font-family: "Poppins", sans-serif;
     margin: 0;
-    width:100%
 }
 
+:root {
+    --color-blue: #1DA1F2;
+    --color-white: #FFFFFF;
+    --color-black: #14171A;
+    --color-dark-grey: #657786;
+    --color-light-grey: #AAB8C2;
+    --color-x-light-grey: #E1E8ED;
+    --color-xx-light-grey: #F5F8FA;
+}

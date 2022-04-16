@@ -3,10 +3,10 @@
 }
 
 .matches:nth-child(even) {
-    background-color: #e7e7e7;
+    background-color: var(--color-xx-light-grey);
 }
 
 .matches:nth-child(odd) {
     
-    background-color: #f9f9f9
+    background-color: var(--color-x-light-grey);
 }
