@@ -7,7 +7,7 @@ header {
     top: 0;
 }
 .header {
-    height: 125px;
+    height: 100px;
     background-color: var(--color-blue);
     color: var(--color-xx-light-grey);
     padding: 0px 20px;
@@ -33,7 +33,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 75px;
+    height: 50px;
     background-color: var(--color-xx-light-grey);
     border-bottom: 1px solid var(--color-x-light-grey);
     box-shadow: 0px 2px 5px 0px  var(--color-xx-light-grey);
@@ -50,7 +50,7 @@ header {
 }
 
 .header-nav-item > span {
-    font-size: 32px;
+    font-size: 24px;
 }
 
 .header-nav-item-active {
