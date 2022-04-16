@@ -1,10 +1,10 @@
 {
-    "name": "CatequeseFTV",
-    "short_name": "CatequeseFTV",
+    "name": "matchday",
+    "short_name": "Matchday",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#FFF",
-    "theme_color": "#FFF",
+    "background_color": "#1DA1F2",
+    "theme_color": "#1DA1F2",
     "icons": [{
         "src": "assets/logo1.svg",
         "sizes": "48x48",
