@@ -33,7 +33,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 50px;
+    height: 60px;
     background-color: var(--color-xx-light-grey);
     border-bottom: 1px solid var(--color-x-light-grey);
     box-shadow: 0px 2px 5px 0px  var(--color-xx-light-grey);

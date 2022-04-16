@@ -1,30 +1,44 @@
-<!-- <div style="margin: 15px 2px;">
+<div style="margin: 15px 2px;">
     <div style="display: flex;
     align-items: center;
     justify-content: space-between;">
-        Jogos
+        Super Copa Catequese
 
-        <select>
+        <!-- <select>
             <option>Copa Catequese</option>
-        </select>
+        </select> -->
     </div>
-</div> -->
-
-<!-- <div style="    background-color: #03a9f440;
-padding: 5px 5px; font-size: 14px;">
-    Grupo A
-</div> -->
-
-<div *ngFor="let match of matches" class="matches">
-    <ftv-match  [match]="match"></ftv-match>
 </div>
+
+
+
+<div class="matches">
+    <div class="matches-header">
+        Grupo A
+    </div>
+    
+    <div *ngFor="let match of matches" class="match">
+        <ftv-match  [match]="match"></ftv-match>
+    </div>
+</div>
+
+<div style="margin-top: 20px;"class="matches">
+    <div class="matches-header">
+        Grupo B
+    </div>
+    
+    <div *ngFor="let match of matches" class="match">
+        <ftv-match  [match]="match"></ftv-match>
+    </div>
+</div>
+
 
 <!-- <div style="    background-color: #03a9f440;
 padding: 5px 5px; font-size: 14px; margin-top: 20px;">
     Grupo B
 </div> -->
 
-<div *ngFor="let match of matches" class="matches">
+<!-- <div *ngFor="let match of matches" class="matches">
 
     <ftv-match  [match]="match"></ftv-match>
-</div>
+</div> -->
