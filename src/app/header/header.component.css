@@ -57,3 +57,8 @@ header {
 .header-nav-item-active {
     color: var(--color-black);
 }
+
+
+.mini-header {
+    background-color: #FFF;
+}

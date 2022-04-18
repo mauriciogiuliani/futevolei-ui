@@ -22,3 +22,14 @@
     
     background-color: var(--color-white);
 }
+
+
+/* SEARCH */
+input::placeholder {
+    color: var(--color-dark-grey);
+    font-family: "Poppins", sans-serif;
+  }
+
+input:focus {
+    outline: none;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Menu } from 'src/model/menu';
 
 @Component({
@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
       icon: "emoji_events",
       // function: this.showTournamentTable
     },
-    
+
     // {
     //   label: "Jogos",
     //   active: true,
@@ -40,14 +40,24 @@ export class HeaderComponent implements OnInit {
     //   icon: "toc",
     //   // function: this.showTournamentTable
     // },
-    
 
-    
+
+
   ];
-  
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(event: any) {
+    let headerMain = document.getElementById('header-main');
+
+    if (headerMain) {
+      // if (window.pageYOffset > 275) {
+      //   headerMain.className.height = "100px"
+      // }
+    }
+  }
 }
