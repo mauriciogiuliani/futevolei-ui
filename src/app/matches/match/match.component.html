@@ -1,33 +1,3 @@
-<div  (click)="toggleMatchDetails()" >
-    <div class="match-info">
-        <span>14:00</span>
-        <span>Quadra 3</span>
-    </div>
-    <div class="match">
-        <div style="flex-basis: 40%">
-            {{ match?.doubleA }}
-        </div>
-        <div class="matches-result">
-            <span>
-                {{ match?.pointsDoubleA }}
-            </span>
-            <span>
-                x
-            </span>
-            <span>
-                {{ match?.pointsDoubleB }}
-            </span>
-        </div>
-        <div style="flex-basis: 40%; display: flex;
-    flex-direction: row-reverse;">
-            {{ match?.doubleB }}
-        </div>
-    </div>
-    
-</div>
-
-
-
 
 <div class="match-details-overlay" *ngIf="isMatchDetailsOpened">
     <div class="match-details">
@@ -54,3 +24,67 @@
 
     </div>
 </div>
+
+
+<div  (click)="toggleMatchDetails()" >
+    <div class="match-info">
+        <!-- <span>14:00</span>
+        <span>Quadra 3</span> -->
+    </div>
+    <div class="match">
+        <div style="display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin: 5px 0px;">
+            <span>
+                {{ match?.doubleA }}
+            </span>
+            <span>
+                {{ match?.doubleB }}
+            </span>
+        </div>
+        <div style="display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5px 5px;">
+            <span>
+                {{ match?.pointsDoubleA }}
+            </span>
+            <span>
+                x
+            </span>
+            <span>
+                {{ match?.pointsDoubleB }}
+            </span>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        <!-- <div style="flex-basis: 40%">
+            {{ match?.doubleA }}
+        </div>
+        <div class="matches-result">
+            <span>
+                {{ match?.pointsDoubleA }}
+            </span>
+            <span>
+                x
+            </span>
+            <span>
+                {{ match?.pointsDoubleB }}
+            </span>
+        </div>
+        <div style="flex-basis: 40%; display: flex;
+    flex-direction: row-reverse;">
+            {{ match?.doubleB }}
+        </div> -->
+    </div>
+    
+</div>
+
+
+
