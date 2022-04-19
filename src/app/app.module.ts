@@ -12,6 +12,7 @@ import { MatchComponent } from './matches/match/match.component'
 import { FormsModule } from '@angular/forms';
 import { LoadingComponent } from './loading/loading.component';
 import { HeaderComponent } from './header/header.component';
+import { TournamentsComponent } from './tournaments/tournaments.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HeaderComponent } from './header/header.component';
     ClassificationComponent,
     MatchComponent,
     LoadingComponent,
-    HeaderComponent
+    HeaderComponent,
+    TournamentsComponent
   ],
   imports: [
     BrowserModule,

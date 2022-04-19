@@ -133,7 +133,7 @@ footer {
 }
 
 .footer-menu-item-active {
-    color: #03a9f4
+    color: var(--color-blue)
 }
 
 .footer-menu-item > span {

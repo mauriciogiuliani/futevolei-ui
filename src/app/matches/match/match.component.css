@@ -1,13 +1,32 @@
 .match {
     display: flex;
     justify-content: space-between;
-    padding: 10px 5px;
-    border: 1px solid #FFF;
+    /* padding: 10px 5px; */
+    /* border: 1px solid #FFF; */
+    font-size: 14px;
+    background-color: var(--color-xx-light-grey);
+    height: 35px;
+    align-items: center;
+    padding: 0px 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+.match-info {
+    display: flex;
+    justify-content: space-between;
     font-size: 12px;
+    background-color: var(--color-x-light-grey);
+    padding: 0px 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    
+
 }
 
 /* MATCH DETAILS */
-.match-details-overlay {
+/* .match-details-overlay {
     background-color: rgba(0, 0, 0, 0.15);
     position: fixed;
     width: 100%;
@@ -41,7 +60,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding: 25px; */
 }
 
 .match-details-content > span {
@@ -67,4 +85,4 @@
     color: #e7e7e7;
     font-family: "Poppins", sans-serif;
     font-size: 14px;
-}
+} */

@@ -1,24 +1,33 @@
-<div class="match" (click)="toggleMatchDetails()" >
-
-    <div style="flex-basis: 40%">
-        {{ match?.doubleA }}
+<div  (click)="toggleMatchDetails()" >
+    <div class="match-info">
+        <span>14:00</span>
+        <span>Quadra 3</span>
     </div>
-    <div class="matches-result">
-        <span>
-            {{ match?.pointsDoubleA }}
-        </span>
-        <span>
-            x
-        </span>
-        <span>
-            {{ match?.pointsDoubleB }}
-        </span>
+    <div class="match">
+        <div style="flex-basis: 40%">
+            {{ match?.doubleA }}
+        </div>
+        <div class="matches-result">
+            <span>
+                {{ match?.pointsDoubleA }}
+            </span>
+            <span>
+                x
+            </span>
+            <span>
+                {{ match?.pointsDoubleB }}
+            </span>
+        </div>
+        <div style="flex-basis: 40%; display: flex;
+    flex-direction: row-reverse;">
+            {{ match?.doubleB }}
+        </div>
     </div>
-    <div style="flex-basis: 40%; display: flex;
-flex-direction: row-reverse;">
-        {{ match?.doubleB }}
-    </div>
+    
 </div>
+
+
+
 
 <div class="match-details-overlay" *ngIf="isMatchDetailsOpened">
     <div class="match-details">

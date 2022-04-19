@@ -12,17 +12,16 @@
 
 .match {
    width: 100%;
-   padding: 10px 0px;
 }
 
-/* .match:nth-child(even) {
+.match:nth-child(even) {
     background-color: var(--color-xx-light-grey);
 }
 
 .match:nth-child(odd) {
     
     background-color: var(--color-white);
-} */
+}
 
 
 /* SEARCH */
