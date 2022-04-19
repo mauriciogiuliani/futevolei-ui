@@ -31,14 +31,8 @@ export class MatchComponent implements OnInit {
   }
 
   saveMatchResult() {
-    this.loadingService.open();
-    this.httpClient.post<any>("https://7hip2znooquhilsdo7mbn2ymui0yrxsl.lambda-url.us-east-1.on.aws", this.match).subscribe(
-      data => {
-        console.log(data);
-        this.toggleMatchDetails();  
-        this.loadingService.close();
-      }
-    );
+    this.httpClient.post<any>("https://7hip2znooquhilsdo7mbn2ymui0yrxsl.lambda-url.us-east-1.on.aws", this.match);
+    this.toggleMatchDetails();  
   }
 
 }

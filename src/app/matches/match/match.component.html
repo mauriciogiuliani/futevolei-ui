@@ -1,32 +1,71 @@
-
 <div class="match-details-overlay" *ngIf="isMatchDetailsOpened">
     <div class="match-details">
 
-        <div class="match-details-header">
+        <div class="match-details-content">
+            <div style="background-color: var(--color-x-light-grey);
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 15px;">
+                <span style="flex-basis: 50%;">Dupla</span>
+
+                <span>1°</span>
+                <!-- <span>2°</span>
+                <span>3°</span> -->
+            </div>
+
+
+            <div style="display: flex;
+            justify-content: space-between;
+            padding: 0px 5px;">
+
+
+                <div style="display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin: 5px 0px;
+            justify-content: center;
+            font-size: 14px;
+            flex-basis: 50%;">
+                    <span>
+                        {{ match?.doubleA }}
+                    </span>
+                    <span>
+                        {{ match?.doubleB }}
+                    </span>
+                </div>
+
+                <div style="display: flex;
+            flex-direction: column;
+            margin: 5px 0px;
+            align-items: center;">
+                    <input type="number" maxlength="2" [(ngModel)]="match.pointsDoubleA" />
+                    <span>
+                        X
+                    </span>
+                    <input type="number" maxlength="2" [(ngModel)]="match.pointsDoubleB" />
+
+                </div>
+
+
+
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <button (click)="saveMatchResult()"> Salvar </button>
+            </div>
+
             
+
         </div>
 
-        <div class="match-details-content">
-            <span>
-               {{ match.doubleA }}
-            </span>
-            <input type="number" maxlength="2" [(ngModel)]="match.pointsDoubleA"/>
-            <span>
-                X
-            </span>
-            <input type="number" maxlength="2" [(ngModel)]="match.pointsDoubleB"/>
-            <span>
-                {{ match.doubleB }}
-            </span>
-            <button (click)="saveMatchResult()"> Salvar </button>
-        </div>
+
 
 
     </div>
 </div>
 
 
-<div  (click)="toggleMatchDetails()" >
+<div (click)="toggleMatchDetails()">
     <div class="match-info">
         <!-- <span>14:00</span>
         <span>Quadra 3</span> -->
@@ -57,13 +96,13 @@
                 {{ match?.pointsDoubleB }}
             </span>
         </div>
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         <!-- <div style="flex-basis: 40%">
             {{ match?.doubleA }}
         </div>
@@ -83,8 +122,5 @@
             {{ match?.doubleB }}
         </div> -->
     </div>
-    
+
 </div>
-
-
-
