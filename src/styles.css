@@ -13,4 +13,47 @@ body {
     --color-light-grey: #AAB8C2;
     --color-x-light-grey: #E1E8ED;
     --color-xx-light-grey: #F5F8FA;
+
+    --color-fb-blue: #3b5998
+}
+
+
+/* Global Components */
+.app-box-white {
+    margin: 15px 2px;
+    background-color: white;
+    color: var(--color-blue);
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 14px;
+    flex-direction: column;
+    padding: 5px 10px;
+}
+
+.app-input-block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.app-v-align-center {
+    display: flex;
+    align-items: center;
+}
+
+.app-divider {
+    height: 1px;
+    background-color: var(--color-light-grey);
+    width: 100%;
+    margin: 25px 0px;
+}
+
+input::placeholder {
+    color: var(--color-dark-grey);
+    font-family: "Poppins", sans-serif;
+}
+
+input:focus {
+    outline: none;
 }

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { LoadingComponent } from './loading/loading.component';
 import { HeaderComponent } from './header/header.component';
 import { TournamentsComponent } from './tournaments/tournaments.component';
+import { appInitializer } from './_helpers/app.initializer';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { TournamentsComponent } from './tournaments/tournaments.component';
     MatchComponent,
     LoadingComponent,
     HeaderComponent,
-    TournamentsComponent
+    TournamentsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,11 @@ import { TournamentsComponent } from './tournaments/tournaments.component';
     HttpClientModule
   ],
   providers: [
-    HttpClientModule
+    HttpClientModule,
+    { provide: APP_INITIALIZER,
+      useFactory: appInitializer, 
+      multi: true 
+    }
   ],
   bootstrap: [AppComponent]
 })

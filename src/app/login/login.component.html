@@ -1,0 +1,67 @@
+<div class="app-box-white app-v-align-center">
+
+
+    <div class="header">
+        Bem Vindo!
+    </div>
+
+    <div class="login-social">
+        <button id="login-fb-btn" (click)="loginFacebook()">
+            Entrar com o Facebook
+        </button>
+    </div>
+
+    <span class="app-divider"></span>
+    
+
+    <div class="login-credentials">
+        <div class="app-input-block">
+            Email
+            <input type="email" />
+        </div>
+
+        <div class="app-input-block">
+            Senha
+            <input type="password"/>
+        </div>
+    </div>
+
+    <div class="login-actions">
+        <button id="login-btn" (click)="logout()">
+            Entrar
+        </button>
+        <!-- <a>Esqueceu a senha?</a>
+        Não tem uma conta? <a>Acesse agora </a> -->
+    </div>
+
+</div>
+
+
+
+<!-- <button (click)="login()"> Login </button> -->
+
+<!-- 
+<div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default"
+    data-auto-logout-link="false" data-use-continue-as="false"></div> -->
+
+
+
+
+<!-- <button (click)="logout()"> Logout </button>
+
+
+<button (click)="email()">email </button> -->
+
+
+<!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
+
+
+<!-- <script>
+    function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    }
+</script> -->
