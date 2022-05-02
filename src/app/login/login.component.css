@@ -5,6 +5,7 @@ button {
 }
 
 .header {
+    padding-top: 25px;
     /* font-family: 'Zen Dots', cursive; */
     margin: auto;
     font-size: 26px;
@@ -26,10 +27,7 @@ button {
     width: 90%
 }
 
-#login-btn {
-    background-color: var(--color-blue);
-    color: var(--color-white);
-}
+
 
 .login-credentials {
     width: 100%;
@@ -48,6 +46,33 @@ button {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
     
 }
 
+.login-actions > a {
+    color: var(--color-dark-grey);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.login-actions-buttons {
+    display: flex;
+    width: 100%;
+    column-gap: 15px;
+}
+
+#login-btn {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    width: 90%;
+    margin-bottom: 15px;
+}
+
+#register-btn {
+    background-color: var(--color-light-grey);
+    color: var(--color-white);
+    width: 90%;
+    margin-bottom: 15px;
+}

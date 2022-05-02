@@ -1,15 +1,16 @@
- <div class="header-nav">
+<div class="header-nav">
 
-        <a class="header-nav-item" *ngFor="let menu of menus"
-        [ngClass]="{'header-nav-item': true, 'header-nav-item-active' : menu.active}">
-            <!-- <div [ngClass]="{'footer-menu-item': true, 'footer-menu-item-active' : menu.active}"> -->
-                <span class="material-icons-outlined">
-                    {{ menu.icon }}
-                </span>
-                {{ menu.label }}
-            <!-- </div> -->
-        </a>
-
+    <a class="header-nav-item" *ngFor="let menu of menus"
+    [ngClass]="{'header-nav-item': true, 'header-nav-item-active' : menu.active}"
+    (click)="logout()">
+        <!-- <div [ngClass]="{'footer-menu-item': true, 'footer-menu-item-active' : menu.active}"> -->
+            <span class="material-icons-outlined">
+                {{ menu.icon }}
+            </span>
+            {{ menu.label }}
+        <!-- </div> -->
+    </a>
+</div>
 
     <!-- <div class="header-menu">
             <span class="material-icons-outlined">

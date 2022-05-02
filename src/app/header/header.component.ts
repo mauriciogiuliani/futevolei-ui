@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Menu } from 'src/model/menu';
+import { LoginService } from '../login/login.service';
 
 @Component({
   selector: 'app-header',
@@ -45,9 +46,13 @@ export class HeaderComponent implements OnInit {
 
   ];
 
-  constructor() { }
+  constructor(private loginService: LoginService) { }
 
   ngOnInit(): void {
+  }
+
+  logout() {
+    this.loginService.logout()
   }
 
   @HostListener('window:scroll', ['$event'])

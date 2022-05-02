@@ -22,11 +22,9 @@ body {
 .app-box-white {
     margin: 15px 2px;
     background-color: white;
-    color: var(--color-blue);
     border-radius: 5px;
     display: flex;
     align-items: flex-start;
-    font-size: 14px;
     flex-direction: column;
     padding: 5px 10px;
 }
