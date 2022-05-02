@@ -6,6 +6,8 @@ import { Team } from 'src/model/team';
 // import  * as matchesJson from './tabela.json'
 
 import { firstValueFrom } from "rxjs";
+import { LoginService } from "./login/login.service";
+import { getCookie } from "./_helpers/cookie.service";
 
 @Component({
   selector: 'app-root',
@@ -125,7 +127,10 @@ export class AppComponent implements OnInit {
     // }
   ]
 
-  constructor(private httpClient: HttpClient) { }
+
+_isUserLoggedIn : boolean = false;
+
+  constructor(private httpClient: HttpClient, private loginService: LoginService) { }
 
   ngOnInit(): void {
 
@@ -143,6 +148,17 @@ export class AppComponent implements OnInit {
     //   }
     // );
 
+
+  }
+
+  get isUserLoggedIn() : boolean {
+   const userCookie = getCookie("user");
+
+   if(userCookie) {
+     return true;
+   }
+
+   return false;
 
   }
 

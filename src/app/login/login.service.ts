@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { concatMap, EMPTY, from, of } from 'rxjs';
+import { removeCookie, setCookie } from '../_helpers/cookie.service';
 
 declare const FB: any;
 declare const gapi: any;
@@ -31,9 +31,20 @@ export class LoginService {
   facebookLogin() {
     new Promise<boolean>((resolve) => {
       FB.login(function (response: any) {
-        // handle the response
-        console.log(response)
         if (response.status == "connected") {
+
+          FB.api('/me?fields=email,name', function (response: any) {
+            const cookie = {
+              name: response.name,
+              email: response.email
+            }
+
+            setCookie("user", JSON.stringify(cookie));
+
+            console.log(response)
+            console.log('Successful login for: ' + response.email);
+          });
+
           resolve(true);
         } else {
           resolve(false)
@@ -87,9 +98,18 @@ export class LoginService {
 
 
   logout() {
-    FB.logout(function (response: any) {
-      console.log(response);
+    removeCookie("user");
+
+    FB.getLoginStatus(function (response: any) {
+      // handle the response
+      console.log(response)
+
+      if (response.status == "connected") {
+        FB.logout();
+      }
     });
+
   }
+
 
 }

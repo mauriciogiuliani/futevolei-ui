@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { concatMap, EMPTY, from, of } from 'rxjs';
+import { getCookie } from '../_helpers/cookie.service';
 import { LoginService } from './login.service';
 
 @Component({
@@ -17,11 +18,16 @@ export class LoginComponent implements OnInit {
 
 
   async ngOnInit(): Promise<void> {
-    await this.loginService.isLoggedIn().then(result => {
-      if(result) {
-        this.router.navigate(["tournaments"])
-      }
-    })
+    if (getCookie("user")) {
+      this.router.navigate(["tournaments"])
+    } else {
+      await this.loginService.isLoggedIn().then(result => {
+        if (result) {
+          this.router.navigate(["tournaments"])
+        }
+      })
+    }
+    
   }
 
   loginFacebook() {
@@ -36,7 +42,7 @@ export class LoginComponent implements OnInit {
     this.loginService.logout();
   }
 
-  
+
   email() {
     this.loginService.email()
   }

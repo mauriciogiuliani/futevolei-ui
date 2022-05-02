@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Menu } from 'src/model/menu';
 import { LoginService } from '../login/login.service';
+import { getCookie } from '../_helpers/cookie.service';
 
 @Component({
   selector: 'app-header',
@@ -46,10 +47,23 @@ export class HeaderComponent implements OnInit {
 
   ];
 
+  _isUserLoggedIn : boolean = false;
+
   constructor(private loginService: LoginService) { }
 
   ngOnInit(): void {
   }
+
+  get isUserLoggedIn() : boolean {
+    const userCookie = getCookie("user");
+ 
+    if(userCookie) {
+      return true;
+    }
+ 
+    return false;
+ 
+   }
 
   logout() {
     this.loginService.logout()

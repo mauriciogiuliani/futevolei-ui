@@ -19,6 +19,10 @@ body {
 
 
 /* Global Components */
+.app-main {
+    margin: 125px 5px 75px 5px;
+}
+
 .app-box-white {
     margin: 15px 2px;
     background-color: white;
