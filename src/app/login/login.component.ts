@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { concatMap, EMPTY, from, of } from 'rxjs';
 import { LoginService } from './login.service';
 
@@ -12,11 +13,15 @@ import { LoginService } from './login.service';
 
 export class LoginComponent implements OnInit {
 
-  constructor(private loginService: LoginService) { }
+  constructor(private loginService: LoginService, private router: Router) { }
 
 
-  ngOnInit(): void {
-    this.loginService.isLoggedIn()
+  async ngOnInit(): Promise<void> {
+    await this.loginService.isLoggedIn().then(result => {
+      if(result) {
+        this.router.navigate(["tournaments"])
+      }
+    })
   }
 
   loginFacebook() {

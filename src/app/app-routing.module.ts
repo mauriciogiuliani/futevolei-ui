@@ -6,9 +6,9 @@ import { TournamentsComponent } from './tournaments/tournaments.component';
 import { AuthGuardService } from './_helpers/auth-guard.service';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', component: LoginComponent  },
   { path: 'tournaments', component: TournamentsComponent, canActivate: [AuthGuardService] },
-  { path: 'tournament/matches', component: MatchesComponent },
+  { path: 'tournaments/matches', component: MatchesComponent, canActivate: [AuthGuardService]  },
 ];
 
 @NgModule({
