@@ -15,22 +15,34 @@ button {
 
 
 .login-social {
-    width: 100%;
+    width: 80%;
     margin-top: 25px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 #login-fb-btn {
     background-color: var(--color-fb-blue);
     color: var(--color-white);
-    width: 90%
+    width: 100%
+}
+
+#login-google-btn {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-light-grey);
+    color: var(--color-dark-grey);
+    width: 100% 
 }
 
 
 
+
+
 .login-credentials {
-    width: 100%;
+    width: 80%;
     color: var(--color-dark-grey);
 }
 
@@ -39,11 +51,11 @@ button {
     padding: 0px 15px;
     border-radius: 10px;
     border: 1px solid var(--color-x-light-grey);
-    width: 90%;
+    /* width: 90%; */
 }
 
 .login-actions {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,7 +78,7 @@ button {
 #login-btn {
     background-color: var(--color-blue);
     color: var(--color-white);
-    width: 90%;
+    width: 100%;
     margin-bottom: 15px;
 }
 

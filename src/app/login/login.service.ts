@@ -59,6 +59,24 @@ export class LoginService {
 
   }
 
+  public googleCallback(response: any) {
+    console.log("AAA")
+    console.log(response);
+    
+    const decodedResponse: any = JSON.parse(atob(response.credential.split(".")[1]));
+
+    console.log(decodedResponse);
+    console.log(decodedResponse.email);
+
+    const cookie = {
+      name: response.name,
+      email: response.email
+    }
+
+    setCookie("user", JSON.stringify(cookie));
+    this.router.navigate(["tournaments"])
+  }
+
 
   // login with facebook and return observable with fb access token on success
   // return from(new Promise<any>(resolve => FB.login(resolve)))
