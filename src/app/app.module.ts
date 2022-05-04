@@ -15,6 +15,7 @@ import { HeaderComponent } from './header/header.component';
 import { TournamentsComponent } from './tournaments/tournaments.component';
 import { appInitializer } from './_helpers/app.initializer';
 import { LoginComponent } from './login/login.component';
+import { AuthenticationService } from './_authentication/authentication.service';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule,
     { provide: APP_INITIALIZER,
       useFactory: appInitializer, 
+      deps: [AuthenticationService],
       multi: true 
     }
   ],

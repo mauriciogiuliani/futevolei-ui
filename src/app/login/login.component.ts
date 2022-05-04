@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../_authentication/authentication.service';
 import { getCookie, setCookie } from '../_helpers/cookie.service';
 import { LoginService } from './login.service';
 
@@ -14,14 +15,20 @@ declare const google: any;
 
 export class LoginComponent implements OnInit {
 
-  constructor(private loginService: LoginService, private router: Router) { }
+  constructor(private loginService: LoginService, private router: Router, private authenticationService: AuthenticationService) { }
 
 
   async ngOnInit() {
+
     await google.accounts.id.initialize({
       client_id: "714491587198-mg6o6k2hfh94o4smdl50amspgj52qrm4.apps.googleusercontent.com",
-      callback: this.teste
+      callback: this.authenticationService.googleLoginCallback
     });
+
+    google.accounts.id.renderButton(
+      document.getElementById("buttonDiv"),
+      { theme: 'outline', size: 'large' }
+    );
 
     // google.accounts.id.renderButton(
     //   document.getElementById("buttonDiv"),
@@ -43,16 +50,26 @@ export class LoginComponent implements OnInit {
 
   }
 
+  teste2() {
+    console.log("native")
+  }
   glogin() {
-   
+    console.log("Prompt")
     google.accounts.id.prompt(); // also display the One Tap dialog
 
+  }
+
+  glogout() {
+    google.accounts.id.revoke('mauriciogiuliani@gmail.com', (done: any) => {
+      console.log(done.error);
+    });
+    // google.accounts.id.cancel();
   }
 
   teste(response: any) {
     console.log("AAA")
     console.log(response);
-    
+
     const decodedResponse: any = JSON.parse(atob(response.credential.split(".")[1]));
 
     console.log(decodedResponse);
@@ -64,7 +81,8 @@ export class LoginComponent implements OnInit {
     }
 
     setCookie("user", JSON.stringify(cookie));
-    this.router.navigate(["tournaments"])
+    const redirectUrl = window.location.href + "/tournaments"
+    window.location.replace(redirectUrl)
 
   }
 

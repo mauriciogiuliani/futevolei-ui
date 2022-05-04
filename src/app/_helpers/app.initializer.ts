@@ -1,14 +1,16 @@
 import { LoginService } from "../login/login.service";
+import { AuthenticationService } from "../_authentication/authentication.service";
 
 declare const FB: any;
-
 declare const google: any;
 
-export function appInitializer() {
+declare const window: any
+
+export function appInitializer(authenticationService: AuthenticationService) {
     return () => new Promise(resolve => {
 
         // wait for facebook sdk to initialize before starting the angular app
-        (window as any).fbAsyncInit = function () {
+        window.fbAsyncInit = function () {
             FB.init({
                 appId: '1123466031780514',
                 cookie: true,
@@ -16,13 +18,16 @@ export function appInitializer() {
                 version: 'v8.0'
             });
         }
-        
-        // google.accounts.id.initialize({
-        //     client_id: "714491587198-mg6o6k2hfh94o4smdl50amspgj52qrm4.apps.googleusercontent.com"
-        //   });
+
+        // window.onload = function () {
+        //     google.accounts.id.initialize({
+        //         client_id: "714491587198-mg6o6k2hfh94o4smdl50amspgj52qrm4.apps.googleusercontent.com",
+        //         callback: authenticationService.googleLoginCallback
+        //     });
+        // }
 
         resolve(true);
     });
 
-    
+
 }
