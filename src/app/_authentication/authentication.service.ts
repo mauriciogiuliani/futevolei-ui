@@ -1,13 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { setCookie } from '../_helpers/cookie.service';
+import { getCookie, setCookie } from '../_helpers/cookie.service';
+import { UserInfo } from '../_model/UserInfo';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
+
   constructor(private router: Router) { }
+
+  getUserInfo() : UserInfo {
+    return JSON.parse(getCookie("user"));
+  }
+
 
   googleLoginCallback(response: any) {
     console.log("AAA")

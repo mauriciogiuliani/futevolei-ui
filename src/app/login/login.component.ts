@@ -25,10 +25,10 @@ export class LoginComponent implements OnInit {
       callback: this.authenticationService.googleLoginCallback
     });
 
-    google.accounts.id.renderButton(
-      document.getElementById("buttonDiv"),
-      { theme: 'outline', size: 'large' }
-    );
+    // google.accounts.id.renderButton(
+    //   document.getElementById("buttonDiv"),
+    //   { theme: 'outline', size: 'large' }
+    // );
 
     // google.accounts.id.renderButton(
     //   document.getElementById("buttonDiv"),
@@ -50,6 +50,10 @@ export class LoginComponent implements OnInit {
 
   }
 
+  fbLogin(response : any) {
+    console.log(response)
+  }
+
   teste2() {
     console.log("native")
   }
@@ -67,23 +71,7 @@ export class LoginComponent implements OnInit {
   }
 
   teste(response: any) {
-    console.log("AAA")
-    console.log(response);
-
-    const decodedResponse: any = JSON.parse(atob(response.credential.split(".")[1]));
-
-    console.log(decodedResponse);
-    console.log(decodedResponse.email);
-
-    const cookie = {
-      name: response.name,
-      email: response.email
-    }
-
-    setCookie("user", JSON.stringify(cookie));
-    const redirectUrl = window.location.href + "/tournaments"
-    window.location.replace(redirectUrl)
-
+    this.authenticationService.googleLoginCallback(response);
   }
 
   goTournaments() {
