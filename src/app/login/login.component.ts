@@ -20,10 +20,12 @@ export class LoginComponent implements OnInit {
 
   async ngOnInit() {
 
-    // await google.accounts.id.initialize({
-    //   client_id: "714491587198-mg6o6k2hfh94o4smdl50amspgj52qrm4.apps.googleusercontent.com",
-    //   callback: this.authenticationService.googleLoginCallback
-    // });
+    google.accounts.id.initialize({
+      client_id: "714491587198-mg6o6k2hfh94o4smdl50amspgj52qrm4.apps.googleusercontent.com",
+      callback: this.authenticationService.googleLoginCallback
+    });
+
+    google.accounts.id.prompt();
 
     // google.accounts.id.renderButton(
     //   document.getElementById("buttonDiv"),

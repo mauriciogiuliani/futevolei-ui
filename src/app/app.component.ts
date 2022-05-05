@@ -137,10 +137,11 @@ _isUserLoggedIn : boolean = false;
   constructor(private authenticationService: AuthenticationService) { }
 
   ngOnInit(): void {
-    google.accounts.id.initialize({
-      client_id: "714491587198-mg6o6k2hfh94o4smdl50amspgj52qrm4.apps.googleusercontent.com",
-      callback: this.authenticationService.googleLoginCallback
-    });
+    // google.accounts.id.initialize({
+    //   client_id: "714491587198-mg6o6k2hfh94o4smdl50amspgj52qrm4.apps.googleusercontent.com",
+    //   auto_select: true,
+    //   callback: this.authenticationService.googleLoginCallback
+    // });
 
     // this.httpClient.get<Match[]>("../assets/tabela.json").subscribe(
     //   data => {
