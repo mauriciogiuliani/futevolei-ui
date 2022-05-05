@@ -8,7 +8,9 @@ import { Team } from 'src/model/team';
 import { firstValueFrom } from "rxjs";
 import { LoginService } from "./login/login.service";
 import { getCookie } from "./_helpers/cookie.service";
+import { AuthenticationService } from "./_authentication/authentication.service";
 
+declare const google: any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -130,9 +132,15 @@ export class AppComponent implements OnInit {
 
 _isUserLoggedIn : boolean = false;
 
-  constructor(private httpClient: HttpClient, private loginService: LoginService) { }
+
+
+  constructor(private authenticationService: AuthenticationService) { }
 
   ngOnInit(): void {
+    google.accounts.id.initialize({
+      client_id: "714491587198-mg6o6k2hfh94o4smdl50amspgj52qrm4.apps.googleusercontent.com",
+      callback: this.authenticationService.googleLoginCallback
+    });
 
     // this.httpClient.get<Match[]>("../assets/tabela.json").subscribe(
     //   data => {

@@ -51,6 +51,11 @@ body {
     margin: 25px 0px;
 }
 
+.app-divider-text {
+    padding: 0px 15px;
+    color:var(--color-dark-grey);
+}
+
 input::placeholder {
     color: var(--color-dark-grey);
     font-family: "Poppins", sans-serif;
