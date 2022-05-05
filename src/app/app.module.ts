@@ -16,6 +16,7 @@ import { TournamentsComponent } from './tournaments/tournaments.component';
 import { appInitializer } from './_helpers/app.initializer';
 import { LoginComponent } from './login/login.component';
 import { AuthenticationService } from './_authentication/authentication.service';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AuthenticationService } from './_authentication/authentication.service'
     LoadingComponent,
     HeaderComponent,
     TournamentsComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

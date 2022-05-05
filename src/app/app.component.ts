@@ -137,26 +137,6 @@ _isUserLoggedIn : boolean = false;
   constructor(private authenticationService: AuthenticationService) { }
 
   ngOnInit(): void {
-    // google.accounts.id.initialize({
-    //   client_id: "714491587198-mg6o6k2hfh94o4smdl50amspgj52qrm4.apps.googleusercontent.com",
-    //   auto_select: true,
-    //   callback: this.authenticationService.googleLoginCallback
-    // });
-
-    // this.httpClient.get<Match[]>("../assets/tabela.json").subscribe(
-    //   data => {
-    //     console.log(data);
-    //     this.matches = data;
-    //     this.refreshTournamentTable();
-    //   });
-
-    // this.httpClient.get<any>("https://7hip2znooquhilsdo7mbn2ymui0yrxsl.lambda-url.us-east-1.on.aws").subscribe(
-    //   data => {
-    //     console.log(data.Items);
-    //     this.matches = data.Items;
-    //   }
-    // );
-
 
   }
 
