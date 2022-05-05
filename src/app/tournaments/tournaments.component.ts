@@ -18,7 +18,8 @@ export class TournamentsComponent implements OnInit {
 
   logout() {
     this.loginService.logout();
-    this.router.navigate([""])
+    window.alert(window.location.protocol + "://" + window.location.hostname)
+    window.location.href = window.location.protocol + "//" + window.location.hostname
   }
 
   userEmail() {
