@@ -18,51 +18,14 @@ height: 100%;">
 
 
     <div class="login-social">
-        <!-- <button id="login-fb-btn" (click)="loginFacebook()">
-            Fazer Login com o Facebook
-        </button>
-
-        <button id="login-google-btn" (click)="glogin()">
-            Fazer Login com o Google
-        </button> -->
-
-        <!-- <div id="buttonDiv"></div> -->
-
-
-        <!-- <button id="login-fb-btn" (click)="loginFacebook()">
-            Entrar com o Facebook
-        </button> -->
-
-        <!-- <div class="fb-login-button" data-width="" data-size="medium" data-button-type="continue_with"
-            data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-onlogin="fbLogin" ></div> -->
-
         <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="outline"
             data-text="Fazer login com o Google" data-size="large" data-locale="pt-BR" data-logo_alignment="left">
         </div>
-        <!-- <div class="g_id_signin" data-type="icon" data-shape="circle" data-theme="outline" data-text="signin_with"
-                data-size="large" data-locale="pt-BR" data-callback="teste">
-            </div> -->
-
-
-        <!-- <div id="g_id_onload" data-context="signin"  data-theme="outline" data-size="large"  data-client_id="714491587198-mg6o6k2hfh94o4smdl50amspgj52qrm4.apps.googleusercontent.com" ></div>  -->
-
-        <!-- <div id="g_id_onload" data-client_id="714491587198-mg6o6k2hfh94o4smdl50amspgj52qrm4.apps.googleusercontent.com"
-            data-context="signin" data-ux_mode="popup" data-callback="teste()" data-close_on_tap_outside="false">
-        </div> -->
-
-        <!-- <div id="g_id_onload" data-client_id="714491587198-mg6o6k2hfh94o4smdl50amspgj52qrm4.apps.googleusercontent.com" data-callback="() => test()">
-        </div>
--->
-        <!-- <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="outline"
-            data-text="signin_with" data-size="large" data-locale="pt-BR" data-logo_alignment="left">
-        </div>  -->
-
-
     </div>
 
     <div class="login-divider">
         <span class="app-divider"></span>
-        <span class="app-divider-text"> OU </span>
+        <span class="app-divider-text"> ou </span>
         <span class="app-divider"></span>
     </div>
 
@@ -81,7 +44,10 @@ height: 100%;">
 
     <div class="login-actions">
 
-        <button id="login-btn" (click)="glogout()">
+        <button class="button-with-icon" id="login-btn" (click)="glogout()">
+            <span class="material-icons-outlined">
+                login
+            </span>
             Entrar
         </button>
 

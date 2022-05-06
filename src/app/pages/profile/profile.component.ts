@@ -26,7 +26,7 @@ export class ProfileComponent implements OnInit {
   }
 
   endSession() {
-
+    this.authenticatioService.endSession();
   }
 
 }

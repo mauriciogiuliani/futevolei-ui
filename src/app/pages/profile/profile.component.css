@@ -1,9 +1,9 @@
 .profile-actions {
     display: flex;
-    justify-content: center;
+    align-items: center;
     margin: 15px;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .profile-actions > button {

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { getCookie, setCookie } from '../_helpers/cookie.service';
+import { getCookie, removeCookie, setCookie } from '../_helpers/cookie.service';
 import { UserInfo } from '../_model/UserInfo';
 
 @Injectable({
@@ -13,6 +13,11 @@ export class AuthenticationService {
 
   getUserInfo() : UserInfo {
     return JSON.parse(getCookie("user"));
+  }
+
+  endSession() {
+    removeCookie("user");
+    window.location.href = window.location.protocol + "//" + window.location.hostname
   }
 
 

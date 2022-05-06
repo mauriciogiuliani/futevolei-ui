@@ -11,7 +11,7 @@ flex-direction: column;
 margin: 0px 25px;
 padding-top: 15px;">
 
-    
+
 
     <div class="app-input-block">
         <label>Email</label>
@@ -37,13 +37,17 @@ padding-top: 15px;">
     </div>
 
     <div class="profile-actions">
-        <button id="update-profile-btn" (click)="updateProfile()">
-            Salvar
-        </button>
-        <button id="logout-btn" (click)="updateProfile()">
+        <button class="button-with-icon" id="update-profile-btn" (click)="updateProfile()">
             <span class="material-icons-outlined">
-                exit_to_app
-            </span> Sair
+                done
+            </span>
+             Salvar
+        </button>
+        <button class="button-with-icon" id="logout-btn" (click)="endSession()">
+            <span class="material-icons-outlined">
+                logout
+            </span>
+            Sair
         </button>
     </div>
 

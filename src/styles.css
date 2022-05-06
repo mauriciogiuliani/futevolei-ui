@@ -106,3 +106,14 @@ button {
     border: 0;
     font-family: "Poppins", sans-serif;
 }
+
+.button-with-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-with-icon > span {
+    padding-right: 5px;
+    font-size: 18px;
+}
