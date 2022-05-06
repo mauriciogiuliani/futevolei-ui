@@ -1,7 +1,7 @@
 .profile-actions {
     display: flex;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 25px;
     flex-direction: column;
     gap: 15px;
 }

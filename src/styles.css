@@ -5,8 +5,8 @@ html {
 }
 
 body {
-    background-color: var(--color-white);
-    /* background-color: var(--color-xx-light-grey); */
+    /* background-color: var(--color-white); */
+    background-color: var(--color-xx-light-grey);
     font-family: "Poppins", sans-serif;
     margin: 0;
 }
@@ -30,13 +30,12 @@ body {
 }
 
 .app-box-white {
-    margin: 15px 2px;
+    margin: 15px 10px;
     background-color: white;
     border-radius: 5px;
     display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 5px 10px;
+    /* align-items: flex-start;
+    flex-direction: column; */
 }
 
 .app-box-xx-light-grey {
