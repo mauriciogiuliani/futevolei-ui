@@ -14,7 +14,7 @@ header {
     color: var(--color-white);
     padding: 0px 20px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--color-x-light-grey);
 }
