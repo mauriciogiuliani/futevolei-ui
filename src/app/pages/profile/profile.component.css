@@ -1,0 +1,27 @@
+.profile-actions {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-actions > button {
+    height: 35px;
+}
+
+
+#update-profile-btn {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    width: 90%;
+}
+
+#logout-btn {
+    background-color: var(--color-x-light-grey);
+    color: var(--color-dark);
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

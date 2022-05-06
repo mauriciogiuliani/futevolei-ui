@@ -1,0 +1,12 @@
+<footer>
+    <div class="footer-menu" *ngFor="let menu of menus">
+      <a (click)="changePage(menu)">
+        <div [ngClass]="{'footer-menu-item': true, 'footer-menu-item-active' : menu.active}">
+          <span class="material-icons-outlined">
+            {{ menu.icon }}
+          </span>
+          {{ menu.label }}
+        </div>
+      </a>
+    </div>
+  </footer>

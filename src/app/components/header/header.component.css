@@ -7,14 +7,14 @@ header {
     top: 0;
 }
 .header {
-    height: 100px;
-    background-color: var(--color-blue);
-    color: var(--color-xx-light-grey);
+    height: 50px;
+    background-color: var(--color-white);
+    color: var(--color-blue);
     padding: 0px 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    
+    border-bottom: 1px solid var(--color-x-light-grey);
 }
 
 .header-menu > span{
@@ -23,7 +23,6 @@ header {
 
 .header-logo {
     font-family: 'Zen Dots', cursive;
-    margin: auto;
     font-size: 26px;
     font-style: italic;
     

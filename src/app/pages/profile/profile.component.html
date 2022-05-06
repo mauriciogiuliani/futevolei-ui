@@ -1,0 +1,50 @@
+<!-- <div style="font-size: 18px;
+color: var(--color-blue);
+padding: 0px 5px;">
+    Perfil
+</div> -->
+
+
+<div style="display: flex;
+justify-content: center;
+flex-direction: column;
+margin: 0px 25px;
+padding-top: 15px;">
+
+    
+
+    <div class="app-input-block">
+        <label>Email</label>
+        <input type="email" [(ngModel)]="userInfo.email" disabled />
+    </div>
+
+    <div class="app-input-block">
+        <label>Nome</label>
+        <input type="text" [(ngModel)]="userInfo.name" />
+    </div>
+
+    <div class="app-input-block">
+        <label>Apelido</label>
+        <input type="text" [(ngModel)]="userInfo.nickname" />
+    </div>
+
+    <div class="app-input-block">
+        <label>Lado de Preferência</label>
+        <select name="select">
+            <option value="left">Esquerda</option>
+            <option value="right">Direita</option>
+        </select>
+    </div>
+
+    <div class="profile-actions">
+        <button id="update-profile-btn" (click)="updateProfile()">
+            Salvar
+        </button>
+        <button id="logout-btn" (click)="updateProfile()">
+            <span class="material-icons-outlined">
+                exit_to_app
+            </span> Sair
+        </button>
+    </div>
+
+</div>
