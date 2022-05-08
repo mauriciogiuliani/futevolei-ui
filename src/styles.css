@@ -5,8 +5,8 @@ html {
 }
 
 body {
-    /* background-color: var(--color-white); */
-    background-color: var(--color-xx-light-grey);
+    background-color: var(--color-white);
+    /* background-color: var(--color-xx-light-grey); */
     font-family: "Poppins", sans-serif;
     margin: 0;
 }
@@ -29,8 +29,12 @@ body {
     margin: 125px 5px 75px 5px;
 }
 
+.app-main-container {
+    margin: 125px 5px 75px 5px;
+}
+
 .app-box-white {
-    margin: 15px 10px;
+    margin: 15px 0px;
     background-color: white;
     border-radius: 5px;
     display: flex;

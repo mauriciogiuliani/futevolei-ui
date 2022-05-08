@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { LoadingService } from './loading.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { LoadingService } from './loading.service';
 })
 export class LoadingComponent implements OnInit {
 
+  // @Input()
   isLoading: boolean = false;
 
   constructor(private loadingService: LoadingService) { }

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoadingService } from '../loading/loading.service';
 import { getCookie, removeCookie, setCookie } from '../_helpers/cookie.service';
 import { UserInfo } from '../_model/UserInfo';
 
@@ -9,7 +10,7 @@ import { UserInfo } from '../_model/UserInfo';
 export class AuthenticationService {
 
 
-  constructor(private router: Router) { }
+  constructor(private loading: LoadingService) { }
 
   getUserInfo() : UserInfo {
     return JSON.parse(getCookie("user"));
@@ -22,7 +23,7 @@ export class AuthenticationService {
 
 
   googleLoginCallback(response: any) {
-    console.log("AAA")
+    // document.getElementById("LoadingComponent")?.
     console.log(response);
 
     const decodedResponse: any = JSON.parse(atob(response.credential.split(".")[1]));

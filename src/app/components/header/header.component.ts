@@ -7,6 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  menus: any = [
+    {
+      label: "Feed",
+      active: true,
+      icon: "feed",
+      route: "profile"
+      // function: this.showTournamentTable
+    },
+    {
+      label: "Grupos",
+      active: false,
+      icon: "group",
+      route: "profile"
+      // function: this.showTournamentTable
+    }
+  ]
 
   constructor() { }
 
